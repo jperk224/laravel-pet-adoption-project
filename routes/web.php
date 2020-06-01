@@ -13,17 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Index/landing Page
+// Landing Page
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 // Cats Page
 Route::get('/cats', function () {
-    echo "Cats page";
+    return view('cats');
 });
 
 // Dogs Page
 Route::get('/dogs', function () {
-    echo "Dogs Page";
+    return view('dogs');
 });
