@@ -14,16 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Landing Page
-Route::get('/', function () {
-    return view('index');
-});
+Route::view('/', 'index');
 
 // Cats Page
-Route::get('/cats', function () {
-    return view('cats');
-});
+Route::view('/cats', 'cats');
 
 // Dogs Page
-Route::get('/dogs', function () {
-    return view('dogs');
-});
+Route::view('/dogs', 'dogs');
