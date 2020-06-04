@@ -19,8 +19,10 @@ class CreatePetsTable extends Migration
             $table->string('pet_name', 100);            // VARCHAR(100) pet_name field
             $table->date('rescue_date');
             $table->longText('pet_description');        // a description about the animal to render in the UI
-            $table->tinyInteger('age');
-            $table->string('img_src', 100);
+            $table->tinyInteger('age_months');
+            $table->tinyInteger('age_years');
+            $table->string('img_src_large', 250);
+            $table->string('img_src_regular', 250);
             $table->string('img_alt_text', 100);
             $table->timestamps();                       // Adds nullable created_at and updated_at columns
         });
