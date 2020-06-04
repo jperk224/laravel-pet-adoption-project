@@ -7,7 +7,7 @@ class PetsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     * Add 100 random pet record to Pets
+     * Add 100 random pet record to pets table
      *
      * @return void
      */
@@ -46,7 +46,7 @@ class PetsTableSeeder extends Seeder
 
             // append cat or dog to unsplash api based on pet type
             // cat and dog are the only choices
-            if($pet_type == 'cat') {
+            if(strtolower($pet_type) == 'cat') {
                 $img_src_large .= 'cat';
                 $img_src_regular .= 'cat';
             }
@@ -55,7 +55,7 @@ class PetsTableSeeder extends Seeder
                 $img_src_regular .= 'dog';
             }
 
-            $img_alt_text = 'A random ' . $pet_type . ' photo';
+            $img_alt_text = 'A random ' . strtolower($pet_type) . ' photo';
 
             DB::table('pets')->insert([
                 'pet_type' => $pet_type,
