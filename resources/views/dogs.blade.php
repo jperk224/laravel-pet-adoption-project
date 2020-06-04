@@ -1,5 +1,5 @@
 <!-- Inherit the main template for the 'dogs' child page -->
-@extends('adoption-site');
+@extends('layout');
 
 @section('body')
 <!-- TODO: Dogs here -->

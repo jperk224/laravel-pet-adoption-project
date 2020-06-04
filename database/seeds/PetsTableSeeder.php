@@ -19,8 +19,11 @@ class PetsTableSeeder extends Seeder
                     'hank', 'wilson', 'poppy', 'darlene', 'cindy', 'wendy', 
                     'mitch', 'jones', 'tops', 'captain', 'summer', 'porter', 'mary', 'bessy'];
         $current_date = new DateTime();
+        $url_counter = 0;   // this will increment with each loop iteration to add a new number to the 
+                            // unsplash api url to pull a different photo for each pet record
 
         for ($i = 0; $i < 100; $i++) {
+            $url_counter++;
             $pet_type = ucwords($pet_types[array_rand($pet_types)]);
             $pet_name = ucwords($names[array_rand($names)]) . ' ' . ucwords($names[array_rand($names)]);
             // generate rescue date in ISO YYYY-MM-DD format
@@ -54,6 +57,9 @@ class PetsTableSeeder extends Seeder
                 $img_src_large .= 'dog';
                 $img_src_regular .= 'dog';
             }
+
+            $img_src_large = $img_src_large . $url_counter;
+            $img_src_regular = $img_src_regular . $url_counter;
 
             $img_alt_text = 'A random ' . strtolower($pet_type) . ' photo';
 
