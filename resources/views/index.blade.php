@@ -2,6 +2,8 @@
 @extends('adoption-site');
 
 @section('body')
+<?php var_dump($pets); ?>
+<!--
 <div class="row mb-5">
     <div class="col-12">
         <div class="card bg-dark">
@@ -11,7 +13,7 @@
             </div>
         </div>
     </div>
-</div> <!-- end row -->
+</div>
 <div class="row mb-4">
     <div class="col-lg-4 mb-4">
         <div class="card bg-dark">
@@ -37,7 +39,7 @@
             </div>
         </div>
     </div>
-</div><!-- end row -->
+</div>
 <div class="row mb-4">
     <div class="col-lg-4 mb-4">
         <div class="card bg-dark">
@@ -63,5 +65,5 @@
             </div>
         </div>
     </div>
-</div><!-- end row -->
+</div> end row -->
 @endsection

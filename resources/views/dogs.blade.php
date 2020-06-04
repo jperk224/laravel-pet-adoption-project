@@ -3,4 +3,5 @@
 
 @section('body')
 <!-- TODO: Dogs here -->
+<?php var_dump($dogs); ?>
 @endsection
