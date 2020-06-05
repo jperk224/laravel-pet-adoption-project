@@ -21,5 +21,4 @@ class AppController extends Controller
     public function renderDogs() {
         return view('dogs', ['dogs' => Pet::where('pet_type', 'dog')->get()]);
     }
-
 }

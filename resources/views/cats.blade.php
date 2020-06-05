@@ -2,6 +2,17 @@
 @extends('layout');
 
 @section('body')
-<!-- TODO: Cats here -->
-<?php var_dump($cats); ?>
+<?php
+
+use App\Http\Controllers\AppController;
+use App\Support\HelperClass;
+
+
+$pet_array = $cats->toArray(); // convert the ORM into an array for pet rendering
+
+// All cats in 'general' section
+
+HelperClass::renderPetCards($pet_array);
+
+?>
 @endsection
