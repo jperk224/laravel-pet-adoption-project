@@ -24,3 +24,9 @@ Route::get('/cats', 'AppController@renderCats');
 // Dogs Page
 // Route::view('/dogs', 'dogs');
 Route::get('/dogs', 'AppController@renderDogs');
+
+// Pet page
+Route::get('/pet/{pet_id}', 'AppController@renderPet');     // Render the appropriate pet based on the id passed
+
+// Redirect home if request to pet page has no id
+Route::redirect('/pet', '/');
