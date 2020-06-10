@@ -21,3 +21,16 @@ footer {
   font-size: 1.8em;
   color:white
 }
+
+.pet-pic {
+  height: 100%;
+  width: 100%;
+}
+
+.pet-header {
+  margin-bottom: 20px;
+}
+
+.pet-info {
+  text-align: center;
+}

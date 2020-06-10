@@ -22,7 +22,7 @@ echo '<div class="row mb-5">
             </div>
         </div>
     </div>
-</div>';  // TODO: Add link to individual Page
+</div>'; 
 
 // All other pets in 'general' section
 

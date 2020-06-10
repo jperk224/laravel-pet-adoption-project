@@ -47,4 +47,42 @@ class HelperClass
         }
         return;
     }
+
+    public static function renderPet($pet) {
+        echo '<div class="container">
+                <div class="row pet-header">
+                    <div class="col-sm-4 pet-info">
+                        <h5>' . $pet["pet_name"] . '</h5>
+                    </div>
+                    <div class="col-sm-4 pet-info">
+                    <h5>Rescued ' . $pet["rescue_date"] . '</h5>
+                    </div>
+                    <div class="col-sm-4 pet-info">';
+                        if($pet["age_years"] > 0) {
+                            echo '<h5>' . $pet["age_years"] . ' years old</h5>';
+                        }
+                        else {
+                            echo '<h5>' . $pet["age_months"] . ' months old</h5>';
+                        }
+                    echo '</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8"> 
+                        <div class="card bg-dark">
+                            <img class="card-img-top pet-pic" src="' . $pet["img_src_regular"] . '" alt="' . $pet["img_alt_text"] 
+                            . '">
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8"> 
+                        <h4>' . $pet["pet_description"] . '</h4>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>';
+    }
 }

@@ -4,7 +4,11 @@
 @section('body')
 <?php
 
-var_dump($pet);
+use App\Support\HelperClass;
+
+$pet = $pet->toArray()[0]; // convert the ORM into an array for ease of use
+
+HelperClass::renderPet($pet);
 
 ?>
 @endsection
