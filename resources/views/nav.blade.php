@@ -6,13 +6,15 @@
         </a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active" style="color: hotpink;">
+                <!-- if to add active class courtesy of Lars Mertens on StackOverflow 
+                https://stackoverflow.com/questions/47093029/how-to-change-a-class-from-a-html-element-in-parent-blade-template -->
+                <li class="nav-item @if(Route::getCurrentRoute()->uri() == '/')active @endif" style="color: hotpink;">
                     <a class="nav-link" href="/"><b>Home</b></a>
                 </li>
-                <li class="nav-item" style="color: hotpink;">
+                <li class="nav-item @if(Route::getCurrentRoute()->uri() == 'cats')active @endif" style="color: hotpink;">
                     <a class="nav-link" href="/cats"><b>Cats</b></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item @if(Route::getCurrentRoute()->uri() == 'dogs')active @endif">
                     <a class="nav-link" href="/dogs"><b>Dogs</b></a>
                 </li>
             </ul>
