@@ -31,9 +31,10 @@ class HelperClass
             } else {
                 echo '<div class="col-lg-4 mb-4">
             <div class="card bg-dark">
-                <img class="card-img-top" src="' . $pet["img_src_regular"] . '" alt="' . $pet["img_alt_text"] . '">
+                <a href="/pet/' . $pet["id"] .'"><img class="card-img-top" src="' 
+                . $pet["img_src_regular"] . '" alt="' . $pet["img_alt_text"] . '"></a>
                 <div class="card-body">
-                    <h5 class="card-title text-light">' . $pet["pet_name"] . '</h5>
+                    <h5 class="card-title text-light"><a href="/pet/' . $pet["id"] .'">' . $pet["pet_name"] . '</a></h5>
                 </div>
             </div>
         </div>';
