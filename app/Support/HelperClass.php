@@ -55,7 +55,7 @@ class HelperClass
                         <h5>' . $pet["pet_name"] . '</h5>
                     </div>
                     <div class="col-sm-4 pet-info">
-                    <h5>Rescued ' . $pet["rescue_date"] . '</h5>
+                    <h5>Rescued ' . date('M d Y', strtotime($pet["rescue_date"])) . '</h5>
                     </div>
                     <div class="col-sm-4 pet-info">';
                         if($pet["age_years"] > 0) {
