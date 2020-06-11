@@ -14,15 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Landing Page
-// Route::view('/', 'index');
 Route::get('/', 'AppController@renderIndex');
 
 // Cats Page
-// Route::view('/cats', 'cats');
 Route::get('/cats', 'AppController@renderCats');
 
 // Dogs Page
-// Route::view('/dogs', 'dogs');
 Route::get('/dogs', 'AppController@renderDogs');
 
 // Pet page
