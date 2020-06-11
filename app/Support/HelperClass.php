@@ -30,7 +30,7 @@ class HelperClass
                 continue;
             } else {
                 echo '<div class="col-lg-4 mb-4">
-            <div class="card bg-dark">
+            <div class="card pet-card-regular bg-dark">
                 <a href="/pet/' . $pet["id"] .'"><img class="card-img-top" src="' 
                 . $pet["img_src_regular"] . '" alt="' . $pet["img_alt_text"] . '"></a>
                 <div class="card-body">

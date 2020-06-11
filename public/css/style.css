@@ -35,3 +35,15 @@ footer {
 .card-title {
   text-align: center;
 }
+
+/** CSS styling to fade in pet cards on scroll **/
+.pet-card-regular {
+  opacity: 0;
+  position: relative;
+}
+
+.pet-card-regular.visible {
+  opacity: 1;
+  transition: all 1s linear;
+  transform: translate3d(0px, -10px, 0px);
+}
